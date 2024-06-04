@@ -28,7 +28,7 @@ for model_name in models_list:
             fps_gpu, num_params, model_size, num_macs = benchmark(model, torch.randn(1, 3, 224, 224), n_warmup=50, n_test=200)
             # write into file to display in streamlit
             with open('GTX3060.txt', 'a') as f:
-                f.write(f'{model_name.capitalize()},{float(fps_gpu):.2f},{num_params/1e6:.2f},{int(model_size/1e6)},{int(num_macs/1e6)}\n')
+                f.write(f'{model_name.capitalize()},{float(fps_gpu):.2f},{num_params/1e6:.2f},{int(model_size/MiB)},{int(num_macs/1e6)}\n')
         except Exception as e:
             print(f"Failed to instantiate {model_name}: {e}")
 

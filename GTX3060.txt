@@ -1,0 +1,13 @@
+Alexnet,874.56,61,1955,714
+Convnext_base,109.33,88,2834,15365
+Convnext_large,58.19,197,6328,34377
+Convnext_small,107.69,50,1607,8691
+Convnext_tiny,192.39,28,914,4460
+Densenet121,75.53,7,255,2850
+Densenet161,56.96,28,917,7757
+Densenet169,55.14,14,452,3379
+Densenet201,44.97,20,640,4316
+Efficientnet_b0,140.34,5,169,394
+Efficientnet_b1,104.67,7,249,582
+Efficientnet_b2,106.51,9,291,672
+Efficientnet_b3,85.00,12,391,980

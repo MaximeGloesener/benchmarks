@@ -17,6 +17,3 @@ try:
     st.write(data)
 except FileNotFoundError:
     st.error(f"No data available for {device}")
-
-# Optional: If you want to display the raw data as well
-# st.write(data)

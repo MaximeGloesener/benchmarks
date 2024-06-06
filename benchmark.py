@@ -4,6 +4,7 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 import time
 import numpy as np
+import torchvision
 
 
 def get_model_macs(model, inputs) -> int:
@@ -184,4 +185,5 @@ def benchmark(model, dummy_input, n_warmup=50, n_test=200, plot=False):
     num_params = get_num_parameters(model)
     model_size = get_model_size(model)
     num_macs = get_model_macs(model, dummy_input)
+
     return fps_gpu, num_params, model_size, num_macs

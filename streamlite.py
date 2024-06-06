@@ -17,3 +17,12 @@ try:
     st.write(data)
 except FileNotFoundError:
     st.error(f"No data available for {device}")
+
+# load data for yolo models
+file_name = f"benchmark_yolo_{device}.txt"
+try:
+    data = pd.read_csv(file_name, header=None, names=['Model', 'Mean inference time (ms)', 'FPS', 'Nombre de paramètres (M)', 'Taille modèle (MB)'])
+    st.write(f"Displaying data for YOLO models on: {device}")
+    st.write(data)
+except FileNotFoundError:
+    st.error(f"No data available for YOLO models on {device}")

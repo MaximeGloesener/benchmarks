@@ -12,7 +12,7 @@ device = st.sidebar.selectbox('Device', ['GTX3060', 'RTX3090'])
 # Load data based on the selected device
 file_name = f"{device}.txt"
 try:
-    data = pd.read_csv(file_name, header=None, names=['Model', 'FPS', 'Nombre de paramètres (M)', 'Taille modèle (MB)', 'Nombre de MACs (M)'])
+    data = pd.read_csv(file_name, header=None, names=['Model', 'FPS CPU', 'FPS GPU', 'Nombre de paramètres (M)', 'Taille modèle (MB)', 'Nombre de MACs (M)', 'Max memory used (MB)', 'TOP 1 ACC', 'TOP 5 ACC'])   
     st.write(f"Displaying data for: {device}")
     st.write(data)
 except FileNotFoundError:
